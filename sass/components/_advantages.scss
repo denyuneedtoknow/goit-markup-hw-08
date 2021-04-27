@@ -1,6 +1,15 @@
 .advantages {
-  --grid__item: 4;
+  @media screen and (max-width: 767px) {
+    --grid__item: 1;
+  }
+  @media screen and (min-width: 768px) {
+    --grid__item: 2;
+  }
+  @media screen and (min-width: 1200px) {
+    --grid__item: 4;
+  }
 }
+
 .advantages__item {
   padding-top: 0;
   &:not(:first-child) {
