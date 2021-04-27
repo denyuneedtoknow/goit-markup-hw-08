@@ -1,0 +1,26 @@
+.advantages {
+  --grid__item: 4;
+}
+.advantages__item {
+  padding-top: 0;
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+  &::before {
+    content: '';
+    display: block;
+    height: 120px;
+    background-color: var(--background-color-secondary);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.advantages__header {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--important-text-color);
+  padding-top: 30px;
+  padding-bottom: 10px;
+}

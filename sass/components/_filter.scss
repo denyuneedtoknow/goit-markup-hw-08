@@ -1,0 +1,11 @@
+.filter {
+  padding-top: 94px;
+  padding-bottom: 34px;
+}
+.filter__button {
+  display: flex;
+  justify-content: center;
+}
+.filter__item:not(:first-child) {
+  margin-left: 8px;
+}

@@ -1,0 +1,58 @@
+.footer {
+  background-color: var(--main-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer__main {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.footer__about-us {
+  flex-basis: calc((50% - 45px) / 2);
+}
+.footer__join-us {
+  color: var(--important-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.footer__subscribe-us {
+  flex-basis: calc(50% - 30px);
+}
+.subscribe__form {
+  display: flex;
+  justify-content: space-between;
+}
+.subscribe__input {
+  width: 358px;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.25;
+  background-color: var(--main-color);
+  border: 1px solid var(--common-text-color);
+  border-radius: 4px;
+}
+.subscribe__button {
+  position: relative;
+}
+.subscribe__icon {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  transform: translateX(10px);
+}
+.footer__address {
+  color: var(--important-color);
+  font-style: normal;
+}
+.footer__contacts {
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
