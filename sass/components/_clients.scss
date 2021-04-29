@@ -1,11 +1,27 @@
 .clients__items {
-  --grid__item: 6;
+  @media screen and (max-width: 767px) {
+    --grid__item: 2;
+  }
+  @media screen and (min-width: 768px) {
+    --grid__item: 3;
+  }
+  @media screen and (min-width: 1200px) {
+    --grid__item: 6;
+  }
 }
 .clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  @media screen and (max-width: 767px) {
+    width: 210px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
   height: 90px;
   fill: var(--common-text-color);
   border: 1px solid var(--common-text-color);
