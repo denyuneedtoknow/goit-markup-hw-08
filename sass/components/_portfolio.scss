@@ -3,13 +3,22 @@
 }
 .portfolio__item {
   border: 1px solid var(--borders-color);
-  --grid__item: 3;
+  // --grid__item: 3;
   transition-property: box-shadow, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
       0px 1px 1px rgba(0, 0, 0, 0.12);
+  }
+  @media screen and (max-width: 767px) {
+    --grid__item: 1;
+  }
+  @media screen and (min-width: 768px) {
+    --grid__item: 2;
+  }
+  @media screen and (min-width: 1200px) {
+    --grid__item: 3;
   }
 }
 .portfolio__link {

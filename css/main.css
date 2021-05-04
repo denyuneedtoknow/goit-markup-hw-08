@@ -1212,11 +1212,35 @@ p {
 
 .filter__button {
   display: flex;
-  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .filter__button {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter__button {
+    justify-content: center;
+  }
 }
 
 .filter__item:not(:first-child) {
   margin-left: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .filter__item:not(:first-child) {
+    padding-top: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .filter__item {
+    padding-top: 15px;
+  }
 }
 
 .portfolio {
@@ -1225,7 +1249,6 @@ p {
 
 .portfolio__item {
   border: 1px solid var(--borders-color);
-  --grid__item: 3;
   transition-property: box-shadow, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1233,6 +1256,24 @@ p {
 
 .portfolio__item:hover {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__item {
+    --grid__item: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+    --grid__item: 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    --grid__item: 3;
+  }
 }
 
 .portfolio__link {

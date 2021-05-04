@@ -4,8 +4,22 @@
 }
 .filter__button {
   display: flex;
-  justify-content: center;
+  @media screen and (max-width: 767px) {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 }
 .filter__item:not(:first-child) {
+  @media screen and (max-width: 767px) {
+    padding-top: 15px;
+  }
   margin-left: 8px;
+}
+.filter__item {
+  @media screen and (max-width: 767px) {
+    padding-top: 15px;
+  }
 }
