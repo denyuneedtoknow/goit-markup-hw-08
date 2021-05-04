@@ -68,11 +68,17 @@
   }
 }
 .button--subscribe {
-  margin-left: 12px;
-  margin-right: auto;
-  margin-bottom: 0;
   padding: 10px 62px 10px 29px;
   letter-spacing: 0.06em;
+  margin-bottom: 0;
+  @media screen and (max-width: 1199px) {
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
 }
 .button--submit {
   margin-top: 30px;

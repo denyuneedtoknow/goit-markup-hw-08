@@ -7,6 +7,12 @@
   @media screen and (max-width: 767px) {
     display: block;
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+  }
   @media screen and (min-width: 1200px) {
     display: flex;
     align-items: baseline;
@@ -14,16 +20,35 @@
   }
 }
 .footer__about-us {
-  flex-basis: calc((50% - 45px) / 2);
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    padding-bottom: 60px;
+  }
+  // @media screen and (min-width: 768px) {
+  //   flex-wrap: wrap;
+  // }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((50% - 45px) / 2);
+  }
 }
 .footer__join-us {
   color: var(--important-color);
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 .footer__subscribe-us {
   @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 60px;
   }
   @media screen and (min-width: 1200px) {
     flex-basis: calc(50% - 30px);
@@ -31,7 +56,7 @@
 }
 .subscribe__form {
   @media screen and (max-width: 767px) {
-    display: flex;
+    display: block;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -39,26 +64,54 @@
   }
 }
 .subscribe__input {
-  width: 358px;
   padding: 15px;
   font-size: 16px;
   line-height: 1.25;
   background-color: var(--main-color);
   border: 1px solid var(--common-text-color);
   border-radius: 4px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 .subscribe__button {
   position: relative;
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
+  }
 }
 .subscribe__icon {
-  position: absolute;
-  top: 13px;
-  right: 28px;
-  transform: translateX(10px);
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    left: 158px;
+    top: 16px;
+    transform: translateX(10px);
+  }
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    left: 158px;
+    top: 16px;
+    transform: translateX(10px);
+  }
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    top: 13px;
+    right: 28px;
+    transform: translateX(10px);
+  }
 }
 .footer__address {
   color: var(--important-color);
   font-style: normal;
+  // @media screen and (max-width: 1199px) {
+  //   padding-bottom: 60px;
+  // }
 }
 .footer__contacts {
   color: var(--secondary-text-color);
@@ -68,5 +121,15 @@
   &:focus,
   &:hover {
     color: var(--accent-color);
+  }
+}
+.footer-logo {
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 20px;
+    text-align: start;
   }
 }
