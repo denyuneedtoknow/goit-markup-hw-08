@@ -12,10 +12,25 @@
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-field__checkbox {
-  display: block;
-  position: relative;
-  text-align: end;
-  margin-right: 11px;
+  @media screen and (max-width: 767px) {
+    display: block;
+    position: relative;
+    text-align: start;
+    margin-left: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: relative;
+    text-align: start;
+    margin-left: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    position: relative;
+    text-align: end;
+    margin-right: 11px;
+  }
 }
 
 .checkbox:checked + .checkbox__icon {
